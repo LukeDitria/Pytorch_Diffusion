@@ -1,0 +1,8 @@
+__pycache__/
+Models/
+Results/
+.ipynb_checkpoints/
+.idea/
+.gz
+.pt
+.png
