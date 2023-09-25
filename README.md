@@ -2,6 +2,8 @@
 # Cold Diffusion
 A simple general purpose Pytorch implementation of Denoising Cold Diffusion
 
+![Results](Results/CelebAHQ_64_images.png)
+
 # Training Examples
 <br>
 <b> Basic training command: </b><br>
