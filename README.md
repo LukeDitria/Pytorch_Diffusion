@@ -36,6 +36,12 @@ python train.py -mn test_run --block_widths 1 2 4 8 --ch_multi 64 --dataset_root
 ```
 python train.py -mn test_run --num_steps 200 --dataset_root #path to dataset root#
 ```
+<br>
 
-
+# My Pytorch Deep Learning Series on Youtube
+[Whole Playlist](https://youtube.com/playlist?list=PLN8j_qfCJpNhhY26TQpXC5VeK-_q3YLPa&si=EVHfovKS-vQ_VZ5a)<br>
+[Pytorch Cold Diffusion Basics](https://youtu.be/8SVV1FGFtik?si=qLEJoZaA8YJZ-q9T)<br>
+<br>
+# If you found this code useful
+[Buy me a Coffee](https://www.buymeacoffee.com/lukeditria)
 <br>
