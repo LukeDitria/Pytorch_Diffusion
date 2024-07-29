@@ -15,11 +15,11 @@ def cosine_alphas_bar(timesteps, s=0.008):
     return alphas_bar
 
 
-def cold_diffuse(diffusion_model, batch_size, total_steps, device, image_size=32,
+def cold_diffuse(diffusion_model, batch_size, total_steps, device, input_size=32,
                  no_p_bar=True, noise_sigma=1, class_indx=None):
 
     diffusion_model.eval()
-    random_image_sample = noise_sigma * torch.randn(batch_size, 3, image_size, image_size, device=device)
+    random_image_sample = noise_sigma * torch.randn(batch_size, 3, input_size, input_size, device=device)
     sample_in = copy.deepcopy(random_image_sample)
 
     alphas = torch.flip(cosine_alphas_bar(total_steps), (0,)).to(device)
@@ -43,4 +43,4 @@ def cold_diffuse(diffusion_model, batch_size, total_steps, device, image_size=32
     index = (total_steps - 1) * torch.ones(batch_size, device=device)
     img_output = diffusion_model(sample_in, index)
 
-    return torch.clamp(img_output, -1, 1), torch.clamp(random_image_sample, -1, 1)
+    return img_output, random_image_sample
