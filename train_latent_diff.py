@@ -114,6 +114,7 @@ for epoch in trange(start_epoch, args.nepoch, leave=False):
                                               total_steps=args.num_steps,
                                               device=device,
                                               input_size=args.latent_size,
+                                              input_channels=4,
                                               noise_sigma=args.noise_sigma)
                 fake_sample = vae.decode(diff_img / 0.18215).sample
 
